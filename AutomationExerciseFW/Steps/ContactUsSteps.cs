@@ -27,8 +27,10 @@ namespace AutomationExerciseFW.Steps
             ut.EnterTextInElement(cup.email, TestConstants.Username);
             ut.EnterTextInElement(cup.subject, TestConstants.Subject);
             ut.EnterTextInElement(cup.message, TestConstants.Message);
+            string path = @"C:\Users\MarkoManic\Downloads\RESTAPI-1-1.pdf";
+            Driver.FindElement(cup.uploadBtn).SendKeys(path);
         }
-        
+
         [When(@"submits contact us form")]
         public void WhenSubmitsContactUsForm()
         {
